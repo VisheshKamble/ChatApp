@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+
+    <!-- Rounded corners -->
+    <corners android:radius="8dp" />
+
+    <!-- Dotted stroke -->
+    <stroke
+        android:width="2dp"
+        android:color="#21BFD0" />
+
+    <!-- Optional background (transparent by default) -->
+    <solid android:color="@android:color/transparent" />
+</shape>
