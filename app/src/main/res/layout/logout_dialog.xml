@@ -101,7 +101,7 @@
                 android:layout_height="44dp"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:background="@drawable/app_theme_gradient_button"
+                android:background="@drawable/gradient_button_rounded"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"

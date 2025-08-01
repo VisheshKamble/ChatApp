@@ -14,22 +14,53 @@
     android:foreground="?attr/selectableItemBackground"
     android:background="@android:color/transparent">
 
-    <!-- Avatar -->
-    <ImageView
-        android:id="@+id/ivAvatar"
+    <!-- Avatar fallback circle -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/avatarContainer"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/circle_user_regular_full"
-        android:contentDescription="@string/app_name"
-        android:scaleType="centerCrop"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        android:layout_marginEnd="12dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <!-- Time (right, baseline with name) -->
+        <TextView
+            android:id="@+id/ivAvatarText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="U"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/purple_600" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Name -->
     <TextView
-        android:fontFamily="@font/poppinsregular"
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="5sp"
+        android:layout_marginStart="5dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:maxLines="1"
+        android:text="User Name"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rightBarrier"
+        app:layout_constraintStart_toEndOf="@id/avatarContainer"
+        app:layout_constraintTop_toTopOf="@id/avatarContainer" />
+
+    <!-- Time -->
+    <TextView
         android:id="@+id/tvTime"
+        android:fontFamily="@font/poppinsregular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10:24"
@@ -38,7 +69,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@id/tvUserName" />
 
-    <!-- Unread badge (under time) -->
+    <!-- Barrier to keep name/message from overlapping right -->
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/rightBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="tvTime" />
+
+    <!-- Last message -->
+    <TextView
+        android:id="@+id/tvLastMessage"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingStart="5dp"
+        android:text="Last message preview…"
+        android:textSize="14sp"
+        android:textColor="#6F6F6F"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName"
+        app:layout_constraintEnd_toStartOf="@id/rightBarrier" />
+
+    <!-- Unread badge -->
     <TextView
         android:id="@+id/tvPendingMessages"
         android:layout_width="wrap_content"
@@ -58,49 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTime" />
 
-    <!-- Barrier so text never overlaps time/badge -->
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/rightBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="start"
-        app:barrierAllowsGoneWidgets="true"
-        app:constraint_referenced_ids="tvTime,tvPendingMessages" />
-
-    <!-- Name -->
-    <TextView
-        android:fontFamily="@font/poppins_medium"
-        android:id="@+id/tvUserName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="User Name"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:maxLines="1"
-        android:ellipsize="end"
-        app:layout_constraintStart_toEndOf="@id/ivAvatar"
-        app:layout_constraintEnd_toStartOf="@id/rightBarrier"
-        app:layout_constraintTop_toTopOf="@id/ivAvatar" />
-
-    <!-- Last message -->
-    <TextView
-        android:id="@+id/tvLastMessage"
-        android:fontFamily="@font/poppinsregular"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Last message preview…"
-        android:textSize="14sp"
-        android:textColor="#6F6F6F"
-        android:maxLines="1"
-        android:ellipsize="end"
-        app:layout_constraintStart_toStartOf="@id/tvUserName"
-        app:layout_constraintEnd_toStartOf="@id/rightBarrier"
-        app:layout_constraintTop_toBottomOf="@id/tvUserName" />
-
-    <!-- Bottom divider inset to text column -->
+    <!-- Divider -->
     <View
         android:id="@+id/bottomDivider"
         android:layout_width="0dp"
@@ -111,7 +125,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvLastMessage"
         app:layout_constraintBottom_toBottomOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

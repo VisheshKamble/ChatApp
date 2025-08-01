@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="TextAppearance.TitleLarge" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:fontFamily">@font/poppinsbold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+    </style>
+
+
+    <style name="TextAppearance.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">@font/poppinsregular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+    </style>
+</resources>

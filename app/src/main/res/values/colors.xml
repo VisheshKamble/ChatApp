@@ -3,7 +3,33 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray_500">#9E9E9E</color>
-    <color name="gray_700">#616161</color>
+    <color name="neutral_light">#F5F7FA</color>
+
+    <!-- Primary / accent gradient colors -->
+    <color name="purple_500">#7C5CFF</color>
+    <color name="purple_600">#6A4DFF</color>
+    <color name="blue_500">#5AB1FF</color>
+
+    <!-- Text -->
+
+        <color name="neutral_white">#FFFFFF</color>
+        <!-- Additional colors for reference -->
+        <color name="primary_text">#121212</color>
+        <color name="secondary_text">#555555</color>
+        <color name="hint_text">#757575</color>
+        <color name="gradient_start">#6A1B9A</color>
+        <color name="gradient_end">#AB47BC</color>
+
+
+
+
+    <color name="text_primary">#1F1F1F</color>
+    <color name="text_secondary">#555555</color>
+    <color name="text_tertiary">#777777</color>
+    <color name="text_disabled">#999999</color>
+
+    <!-- Semantic extras -->
+    <color name="surface">#FFFFFF</color>
     <color name="ic_launcher_background">#FFFFFF</color>
 
 
