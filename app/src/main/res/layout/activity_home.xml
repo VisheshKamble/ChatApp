@@ -19,12 +19,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="48dp"
+                android:paddingTop="20dp"
                 android:paddingBottom="16dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:background="@drawable/gradient_header"
-                android:elevation="6dp">
+                android:elevation="40dp">
 
                 <!-- Title + Logout -->
                 <LinearLayout
@@ -59,7 +59,7 @@
                 <androidx.appcompat.widget.SearchView
                     android:id="@+id/searchView"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
+                    android:layout_height="40dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/rounded_search_bg"
                     android:queryHint="Search chats..."
@@ -83,7 +83,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:paddingStart="8dp"
-                    android:paddingEnd="8dp">
+                    android:paddingEnd="10dp">
+
+
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/userRecyclerView"

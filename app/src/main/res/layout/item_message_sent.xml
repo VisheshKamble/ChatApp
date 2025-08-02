@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:padding="12dp">
 
     <!-- Push content to right -->
     <View
@@ -16,44 +17,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-    android:background="@drawable/sent_msg_bg"
-    android:padding="10dp"
-    android:layout_marginEnd="8dp">
-
-    <TextView
-        android:fontFamily="@font/poppins_medium"
-        android:id="@+id/tvSentMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sent message"
-        android:textColor="#ffffff"
-        android:textSize="16sp" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end"
-        android:layout_marginTop="4dp">
+        android:background="@drawable/sent_msg_gradient"
+        android:padding="12dp"
+        android:layout_marginEnd="12dp"
+        android:elevation="4dp">
 
         <TextView
-            android:fontFamily="@font/poppinsregular"
-            android:id="@+id/tvSentTime"
+            android:id="@+id/tvSentMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12:00 PM"
-            android:textSize="10sp"
-            android:textColor="@color/white" />
+            android:text="Sent message"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_medium"
+            android:shadowColor="#22000000"
+            android:shadowRadius="1"
+            android:shadowDx="1"
+            android:shadowDy="1" />
 
-        <ImageView
-            android:id="@+id/ivTick"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="4dp"
-            android:src="@drawable/ic_single_tick"
-            android:contentDescription="Tick Icon" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tvSentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 PM"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsregular"
+                android:shadowColor="#22000000"
+                android:shadowRadius="0.5"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5" />
+
+            <ImageView
+                android:id="@+id/ivTick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_double_tick"
+                android:contentDescription="Tick Icon"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
-    </LinearLayout>
-
-
