@@ -1,6 +1,6 @@
 # 💬 Chat App (Android - Kotlin + Firebase)
 
-A real-time Android chat application built with **Kotlin** and **Firebase**, offering smooth messaging, user authentication, and a modern WhatsApp-inspired UI.  
+A real-time Android chat application built with **Kotlin** and **Firebase**, offering smooth messaging, user authentication, and a modern UI.  
 This app is a beginner-to-intermediate real-world project that demonstrates mobile app development, Firebase integration, and clean Android UI design.
 
 ---
