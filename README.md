@@ -64,7 +64,7 @@ Run the app on an emulator or physical device.
 Author
 
 Vishesh Kamble 
-"Built by an 18-year-old aspiring software engineer."
+
 
 License
 MIT License - Feel free to modify and distribute.
